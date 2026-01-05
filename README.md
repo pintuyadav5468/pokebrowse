@@ -5,21 +5,21 @@ A modern, responsive React application for searching and discovering Pokémon us
 
 ## Features
 
-- 🔎 Real-time Search**: Debounced search (500ms) to minimize API calls
-- 🏷️ Type Filtering**: Filter Pokémon by their types (Fire, Water, Grass, etc.)
-- 📱 Responsive Design**: Works seamlessly on mobile, tablet, and desktop
-- ⚡ Loading States**: Animated Pokéball spinner during data fetching
-- ❌ Error Handling**: Clear error messages with retry functionality
-- 🎨 Beautiful UI**: Modern design with gradients, animations, and hover effects
-- 🎯 Type-specific Colors**: Each Pokémon card is colored based on its primary type
+- 🔎 Real-time Search : Debounced search (500ms) to minimize API calls
+- 🏷️ Type Filtering : Filter Pokémon by their types (Fire, Water, Grass, etc.)
+- 📱 Responsive Design : Works seamlessly on mobile, tablet, and desktop
+- ⚡ Loading States : Animated Pokéball spinner during data fetching
+- ❌ Error Handling : Clear error messages with retry functionality
+- 🎨 Beautiful UI : Modern design with gradients, animations, and hover effects
+- 🎯 Type-specific Colors : Each Pokémon card is colored based on its primary type
 
 ## API Information
 
 This app uses the free [PokéAPI](https://pokeapi.co/) - no API key required!
 
-- Base URL**: https://pokeapi.co/api/v2
-- Rate Limit**: None for typical usage
-- Documentation**: https://pokeapi.co/docs/v2
+- Base URL : https://pokeapi.co/api/v2
+- Rate Limit : None for typical usage
+- Documentation : https://pokeapi.co/docs/v2
 
 ## Tech Stack
 
