@@ -32,12 +32,20 @@ const fetchPokemonDetails = async (nameOrUrl) => {
     const response = await axios.get(url);
     const data = response.data;
 
+    const officialArtwork = data.sprites.other["official-artwork"].front_default;
+
     return {
       id: data.id,
       name: data.name,
-      image:
-        data.sprites.other["official-artwork"].front_default ||
-        data.sprites.front_default,
+      // raw.githubusercontent.com rate-limits hotlinked images (429s in
+      // production); jsDelivr mirrors the same repo without that limit.
+      image: officialArtwork
+        ? officialArtwork.replace(
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master",
+            "https://cdn.jsdelivr.net/gh/PokeAPI/sprites@master"
+          )
+        : data.sprites.front_default,
+      fallbackImage: data.sprites.front_default,
       types: data.types.map((t) => t.type.name),
       height: data.height,
       weight: data.weight,

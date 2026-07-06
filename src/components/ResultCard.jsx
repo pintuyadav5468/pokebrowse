@@ -43,6 +43,11 @@ function ResultCard({ pokemon }) {
           alt={pokemon.name}
           className="pokemon-image"
           loading="lazy"
+          onError={(e) => {
+            if (pokemon.fallbackImage && e.target.src !== pokemon.fallbackImage) {
+              e.target.src = pokemon.fallbackImage;
+            }
+          }}
         />
       </div>
 
